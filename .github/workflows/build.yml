@@ -28,7 +28,6 @@ jobs:
 
       - name: Build APK for 32-bit and 64-bit
         run: |
-          cd flutter_export
           flutter pub get
           flutter build apk --release
 
@@ -36,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: VirtualPhone-APK
-          path: 'flutter_export/build/app/outputs/flutter-apk/*.apk'
+          path: 'build/app/outputs/flutter-apk/*.apk'
